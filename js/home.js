@@ -83,7 +83,7 @@ $(function(){
 				    	return true;
 				    },
 				    onApprove : function() {
-				    	submitInfo();
+				    	submitInfo(ticker);
 				    }
 				  })
 				  .modal('show');
@@ -220,7 +220,7 @@ $(function(){
 	        .append("g")
 	        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 	    	;
-	    	
+
 	    //applying the tip to the chart
 	    chart.call(tip);
 
@@ -291,8 +291,9 @@ $(function(){
 		$('#MktCap').fadeOut(fadeout,function(){ $(this).text(obj.MktCap).fadeIn(fadein); });
 	};
 
-	var submitInfo = function () {
-		var ticker = $("#ticker").val().toUpperCase() || "SPY";
+	var submitInfo = function (ticker) {
+		var ticker = $("#ticker").val().toUpperCase() || ticker || "SPY";
+		$("#ticker").val('');
 		createStockObject(ticker);
 
 	};
