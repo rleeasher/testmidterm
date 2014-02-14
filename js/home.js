@@ -283,7 +283,7 @@ $(function(){
 		$('#60').fadeOut(fadeout,function(){ $(this).text(obj.vol60.toFixed(2)).fadeIn(fadein); });
 		$('#90').fadeOut(fadeout,function(){ $(this).text(obj.vol90.toFixed(2)).fadeIn(fadein); });
 		$('#120').fadeOut(fadeout,function(){ $(this).text(obj.vol120.toFixed(2)).fadeIn(fadein); });
-		$('#Change').fadeOut(fadeout,function(){ $(this).text(obj.Change+"%").fadeIn(fadein); });
+		$('#Change').fadeOut(fadeout,function(){ $(this).text(obj.Change).fadeIn(fadein); });
 		$('#Bid').fadeOut(fadeout,function(){ $(this).text(obj.Bid).fadeIn(fadein); });
 		$('#Ask').fadeOut(fadeout,function(){ $(this).text(obj.Ask).fadeIn(fadein); });
 		$('#PE').fadeOut(fadeout,function(){ $(this).text(obj.PE).fadeIn(fadein); });
